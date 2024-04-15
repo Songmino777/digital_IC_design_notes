@@ -106,7 +106,7 @@
 
   要求精确的时候用PLL先倍频再分频。对于相位和占空比要求不严格，若要求N=M.D>1分频，分为整数M和小数D，我们使用M分频和M+1分频来构成M.D分频。
 
-  ![img](C:\Users\APU\OneDrive\notes\pics\小数分频.png)
+  ![img](pics/小数分频.png)
 
 ### clock gating
 
@@ -128,11 +128,11 @@ assign gated_clk = clkEn & clk_in;
 
   基本思路：根据clock gating，使用负沿触发的flip-flop，确保sel信号在低电平时候更新，同时用and gate确保在时钟高电平时切换。
 
-  ![img](C:\Users\APU\OneDrive\notes\pics\641-1605522451350.jpg)
+  ![img](pics/641-1605522451350.jpg)
 
   问题：sel信号异步可能带来亚稳态，所有要加同步器。
 
-  ![img](C:\Users\APU\OneDrive\notes\pics\640.jpg)
+  ![img](pics/640.jpg)
 
   新的问题：
 
